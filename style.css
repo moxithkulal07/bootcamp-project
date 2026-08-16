@@ -1,0 +1,275 @@
+:root {
+    --primary: #10b981;
+    --primary-dark: #059669;
+    --bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --border: #d1d5db;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    padding-bottom: 40px;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Notification Alert Message Box */
+.message-box {
+    display: none;
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message-box.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.message-box.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
+
+/* Filters */
+.filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-container input, .filter-container select {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+.filter-container input {
+    flex: 2;
+    min-width: 200px;
+}
+
+.filter-container select {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Grid Layout */
+.layout {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.panel {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    flex: 1;
+    min-width: 320px;
+}
+
+.panel h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--bg);
+    padding-bottom: 8px;
+}
+
+/* Station Cards */
+.station-card {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #fafafa;
+}
+
+.station-card h3 {
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.station-card p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.badge.available { background: #d1fae5; color: #065f46; }
+.badge.busy { background: #fee2e2; color: #991b1b; }
+.badge.maintenance { background: #fef3c7; color: #92400e; }
+
+/* Forms */
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.primary-btn {
+    background-color: var(--primary);
+    color: white;
+    width: 100%;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.secondary-btn {
+    background-color: var(--text-light);
+    color: white;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.select-btn {
+    background-color: #2563eb;
+    color: white;
+    margin-top: 8px;
+}
+
+.action-btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    margin-right: 4px;
+}
+
+.edit-btn { background: var(--warning); color: white; }
+.cancel-btn { background: var(--danger); color: white; }
+
+/* Table */
+.table-container {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+}
+
+th {
+    background-color: #f9fafb;
+}
+
+.hidden {
+    display: none;
+}
